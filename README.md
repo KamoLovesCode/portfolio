@@ -1,133 +1,122 @@
-# KamoCodes Portfolio
+# Kamogelo Mosia's Professional Portfolio
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+This is the official repository for Kamogelo Mosia's professional portfolio website, showcasing full-stack development and UI/UX design projects.
 
-## 🚀 Features
+## Table of Contents
 
-- **Modern Design**: Clean and professional layout
-- **Responsive**: Works perfectly on all devices
-- **Dark/Light Mode**: Theme switching capability
-- **AI Chat Integration**: Interactive AI assistant powered by Gemini
-- **Fast Performance**: Optimized for speed and SEO
-- **GitHub Pages Ready**: Configured for static deployment
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running Locally](#running-locally)
+- [Deployment](#deployment)
+  - [GitHub Pages](#github-pages)
+- [Custom Domain](#custom-domain)
+- [Contact](#contact)
+- [License](#license)
 
-## 🛠️ Tech Stack
+## Features
 
-- **Framework**: Next.js 14
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: Radix UI + shadcn/ui
-- **Icons**: Lucide React
-- **Deployment**: GitHub Pages
-- **Domain**: kamocodes.xyz
+- **Responsive Design**: Optimized for all devices (desktop, tablet, mobile).
+- **AI Chat Integration**: An AI-powered chat assistant to answer questions about the portfolio.
+- **Smooth Animations**: Enhanced user experience with subtle and engaging animations.
+- **Theming**: Light and dark mode support.
+- **Project Showcase**: Dedicated sections for portfolio projects, services, and experience.
+- **Contact Form**: Easy way for visitors to get in touch.
 
-## 🏗️ Project Structure
+## Technologies Used
 
-\`\`\`
-├── app/                 # Next.js app directory
-├── components/          # React components
-├── hooks/              # Custom React hooks
-├── lib/                # Utility functions
-├── public/             # Static assets
-└── styles/             # Global styles
-\`\`\`
+- **Next.js**: React framework for production.
+- **React**: Frontend library for building user interfaces.
+- **TypeScript**: Strongly typed JavaScript.
+- **Tailwind CSS**: Utility-first CSS framework for rapid styling.
+- **Shadcn/ui**: Reusable UI components built with Radix UI and Tailwind CSS.
+- **Lucide React**: Beautifully crafted open-source icons.
+- **Vercel AI SDK**: For integrating AI models (e.g., Gemini API).
+- **GitHub Actions**: For continuous integration and deployment to GitHub Pages.
 
-## 🚀 Getting Started
+## Getting Started
 
-1. **Clone the repository**
+Follow these steps to get a local copy of the project up and running.
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or pnpm
+
+### Installation
+
+1. Clone the repository:
    \`\`\`bash
    git clone https://github.com/KamoLovesCode/portfolio.git
    cd portfolio
    \`\`\`
-
-2. **Install dependencies**
+2. Install dependencies:
    \`\`\`bash
    npm install
+   # or if you prefer pnpm
+   # pnpm install
    \`\`\`
 
-3. **Run the development server**
-   \`\`\`bash
-   npm run dev
-   \`\`\`
+### Running Locally
 
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+To run the development server:
 
-## 📦 Build & Deploy
-
-The project is configured for automatic deployment to GitHub Pages:
-
-1. **Build for production**
-   \`\`\`bash
-   npm run build
-   \`\`\`
-
-2. **Deploy to GitHub Pages**
-   - Push to the `main` branch
-   - GitHub Actions will automatically build and deploy
-   - Site will be available at [https://kamocodes.xyz](https://kamocodes.xyz)
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env.local` file for local development:
-
-\`\`\`env
-GEMINI_API_KEY=your_gemini_api_key_here
+\`\`\`bash
+npm run dev
+# or
+# pnpm run dev
 \`\`\`
 
-### Custom Domain Setup
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-The project is configured for the custom domain `kamocodes.xyz`:
+## Deployment
 
-1. **CNAME file**: Located in `public/CNAME`
-2. **GitHub Pages**: Configure in repository settings
-3. **DNS**: Point your domain to GitHub Pages
+This project is configured for deployment to GitHub Pages using GitHub Actions.
 
-## 📱 Sections
+### GitHub Pages
 
-- **Hero**: Introduction and main call-to-action
-- **About**: Personal information and skills
-- **Experience**: Work history and achievements
-- **Portfolio**: Featured projects and work
-- **Services**: Offered services and capabilities
-- **Contact**: Contact information and form
-- **AI Chat**: Interactive AI assistant
+The `.github/workflows/deploy.yml` workflow automates the build and deployment process.
+It will:
+1. Checkout the repository.
+2. Set up Node.js.
+3. Install dependencies.
+4. Build the Next.js application for static export (`npm run export`).
+5. Configure GitHub Pages.
+6. Upload the built artifacts to GitHub Pages.
+7. Deploy the site to GitHub Pages.
 
-## 🎨 Customization
+The deployment is triggered on pushes to the `main` branch and pull requests to `main`.
 
-### Themes
-- Light and dark mode support
-- Customizable color schemes in `tailwind.config.ts`
+## Custom Domain
 
-### Content
-- Update personal information in component files
-- Replace placeholder images in `public/` directory
-- Modify sections in respective component files
+This project is configured to use the custom domain `kamocodes.xyz`.
 
-## 🤖 AI Integration
+To ensure your custom domain works correctly with GitHub Pages and HTTPS:
 
-The portfolio includes an AI chat feature powered by Google's Gemini API:
+1.  **DNS Configuration**:
+    -   In your domain registrar's settings, create `A` records pointing to GitHub Pages IP addresses:
+        -   `185.199.108.153`
+        -   `185.199.109.153`
+        -   `185.199.110.153`
+        -   `185.199.111.153`
+    -   (Optional) Create a `CNAME` record for `www.kamocodes.xyz` pointing to `kamocodes.xyz`.
 
-- Interactive conversations
-- Professional assistance
-- Seamless integration with the portfolio
+2.  **GitHub Repository Settings**:
+    -   Go to your repository on GitHub.
+    -   Navigate to `Settings` > `Pages`.
+    -   Under "Custom domain", enter `kamocodes.xyz` and click "Save".
+    -   **Crucially, check the "Enforce HTTPS" box.** This will provision an SSL certificate for your domain and resolve the security warning.
 
-## 📄 License
+The `public/CNAME` file is already included in the project to inform GitHub Pages about your custom domain.
 
-This project is open source and available under the [MIT License](LICENSE).
+## Contact
 
-## 🤝 Contributing
+For any inquiries, please reach out to Kamogelo Mosia:
+- Email: kamogelomosiah@gmail.com
+- Website: [https://kamocodes.xyz](https://kamocodes.xyz)
 
-Contributions, issues, and feature requests are welcome!
+## License
 
-## 📞 Contact
-
-- **Website**: [kamocodes.xyz](https://kamocodes.xyz)
-- **GitHub**: [@KamoLovesCode](https://github.com/KamoLovesCode)
-- **Email**: Contact through the website
-
----
-
-Built with ❤️ by KamoCodes
+This project is licensed under the MIT License.

@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
-  distDir: 'out',
+  output: 'export', // Ensures Next.js builds as a static site
+  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -11,19 +9,12 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true
+    unoptimized: true, // Required for static export
   },
-  // Configure for GitHub Pages deployment on kamocodes.xyz
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-  basePath: '',
-  
-  // Compress output
-  compress: true,
-  
-  // Generate sitemap and robots.txt
-  generateBuildId: async () => {
-    return 'kamocodes-portfolio-' + Date.now()
-  }
-}
+  experimental: {
+    // Remove optimizeCss if it causes issues with 'critters' or if you prefer not to use it
+    // optimizeCss: true,
+  },
+};
 
-export default nextConfig
+export default nextConfig;
