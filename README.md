@@ -1,65 +1,133 @@
-# 🚀 Kamogelo Mosia – Portfolio Website
+# KamoCodes Portfolio
 
-[![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://kamocodes.xyz)
-[![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
-[![Styled with Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-> Professional portfolio website for **Kamogelo Mosia** – Full-Stack Developer & UI/UX Designer with 10+ years of experience.  
-> Includes an AI-powered chat assistant, responsive layouts and smooth animations.
+## 🚀 Features
 
-**Live site:** <https://kamocodes.xyz>
-
----
-
-## ✨ Features
-
-• 🤖 **AI Chat Assistant** – ask questions about skills, projects & experience  
-• 📱 **Fully Responsive** – mobile-first, works on every device  
-• 🎨 **Modern UI/UX** – Poppins font, clean layout, Tailwind animations  
-• ⚡ **Fast & Static** – exportable build ready for GitHub Pages  
-• ♿ **Accessible** – keyboard navigation & ARIA-friendly components
-
----
+- **Modern Design**: Clean and professional layout
+- **Responsive**: Works perfectly on all devices
+- **Dark/Light Mode**: Theme switching capability
+- **AI Chat Integration**: Interactive AI assistant powered by Gemini
+- **Fast Performance**: Optimized for speed and SEO
+- **GitHub Pages Ready**: Configured for static deployment
 
 ## 🛠️ Tech Stack
 
-| Layer            | Tools / Libraries                                   |
-| ---------------- | --------------------------------------------------- |
-| Front-end        | **Next.js 14** (App Router), React 18               |
-| Styling          | **Tailwind CSS v3**, shadcn/ui, Radix UI primitives |
-| Icons            | Lucide React                                        |
-| AI Integration   | Google Gemini API (via `/api/chat` route)           |
-| Deployment       | GitHub Pages (static export)                        |
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI + shadcn/ui
+- **Icons**: Lucide React
+- **Deployment**: GitHub Pages
+- **Domain**: kamocodes.xyz
 
----
+## 🏗️ Project Structure
 
-## 🚀 Local Development
-
-\`\`\`bash
-# 1. Install dependencies
-npm install
-
-# 2. Start the dev server
-npm run dev
+\`\`\`
+├── app/                 # Next.js app directory
+├── components/          # React components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+├── public/             # Static assets
+└── styles/             # Global styles
 \`\`\`
 
-The app will be available at <http://localhost:3000>.
+## 🚀 Getting Started
 
----
+1. **Clone the repository**
+   \`\`\`bash
+   git clone https://github.com/KamoLovesCode/portfolio.git
+   cd portfolio
+   \`\`\`
 
-## 📦 Static Export & Deployment
+2. **Install dependencies**
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-The project is configured to export a static build that can be hosted on GitHub Pages.
+3. **Run the development server**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
-\`\`\`bash
-# generate the static site in the /out folder
-npm run export
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📦 Build & Deploy
+
+The project is configured for automatic deployment to GitHub Pages:
+
+1. **Build for production**
+   \`\`\`bash
+   npm run build
+   \`\`\`
+
+2. **Deploy to GitHub Pages**
+   - Push to the `main` branch
+   - GitHub Actions will automatically build and deploy
+   - Site will be available at [https://kamocodes.xyz](https://kamocodes.xyz)
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.local` file for local development:
+
+\`\`\`env
+GEMINI_API_KEY=your_gemini_api_key_here
 \`\`\`
 
-A GitHub Actions workflow in `.github/workflows/` automatically builds and deploys the `/out` folder to the `gh-pages` branch whenever you push to `main`.
+### Custom Domain Setup
 
----
+The project is configured for the custom domain `kamocodes.xyz`:
+
+1. **CNAME file**: Located in `public/CNAME`
+2. **GitHub Pages**: Configure in repository settings
+3. **DNS**: Point your domain to GitHub Pages
+
+## 📱 Sections
+
+- **Hero**: Introduction and main call-to-action
+- **About**: Personal information and skills
+- **Experience**: Work history and achievements
+- **Portfolio**: Featured projects and work
+- **Services**: Offered services and capabilities
+- **Contact**: Contact information and form
+- **AI Chat**: Interactive AI assistant
+
+## 🎨 Customization
+
+### Themes
+- Light and dark mode support
+- Customizable color schemes in `tailwind.config.ts`
+
+### Content
+- Update personal information in component files
+- Replace placeholder images in `public/` directory
+- Modify sections in respective component files
+
+## 🤖 AI Integration
+
+The portfolio includes an AI chat feature powered by Google's Gemini API:
+
+- Interactive conversations
+- Professional assistance
+- Seamless integration with the portfolio
 
 ## 📄 License
 
-This project is released under the MIT License. Feel free to fork and adapt for your own portfolio.
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📞 Contact
+
+- **Website**: [kamocodes.xyz](https://kamocodes.xyz)
+- **GitHub**: [@KamoLovesCode](https://github.com/KamoLovesCode)
+- **Email**: Contact through the website
+
+---
+
+Built with ❤️ by KamoCodes

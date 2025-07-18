@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  distDir: 'out',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -11,11 +14,8 @@ const nextConfig = {
     unoptimized: true
   },
   // Configure for GitHub Pages deployment on kamocodes.xyz
-  
-  // Optimize for static export
-  experimental: {
-    optimizeCss: true,
-  },
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
+  basePath: '',
   
   // Compress output
   compress: true,
